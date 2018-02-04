@@ -1,0 +1,20 @@
+---
+title: "Readme"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Computational finance
+
+Collection of files from datacamp classes https://www.datacamp.com/courses/introduction-to-portfolio-analysis-in-r and https://www.datacamp.com/courses/financial-trading-in-r. They are useful to become familiar with several R commands and to learn how to use several pacakges used to obtain and analize financial data.
+
+**Basics**: Difference between simple and compound returns, Gaussian probabilities and densities using several variables, time-series basics and introduction to financial packages.
+
+**Portfolio Analysis in R**: 
+PerformanceAnalytics package to analyze portfolio returns. How to estimate portfolio weights that optimally balance risk and return. Sharpe ratio, efficient frontier, etc. 
+
+**Financial Trading**: 
+Quantstrat package to build signal-based trading strategies. Set-up quantstrat strategy, apply transformations of market data called indicators, create signals based on the interactions of those indicators, simulate orders. Analyze returns both from statistical and visual perspectives.

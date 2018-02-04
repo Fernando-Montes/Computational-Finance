@@ -1,0 +1,16 @@
+# Data for the Apple and Microsoft Stock (used in chapter 1)
+library(tseries)
+library(xts)
+aapl <- get.hist.quote(instrument="AAPL",start=as.Date("2005-12-31"),end=Sys.Date(),quote="AdjClose",quiet=T)
+msft <- get.hist.quote(instrument="MSFT",start=as.Date("2005-12-31"),end=Sys.Date(),quote="AdjClose",quiet=T)
+
+# Data for S&P 500 (used in chapter 2)
+library(tseries)
+sp500 <- get.hist.quote(instrument="^GSPC",start=as.Date("1985-12-31"),end=Sys.Date(),quote="AdjClose",quiet=T,compression="d")
+
+# Data on US Equities and bonds (used in chapter 3)
+library(tseries)
+eq_prices <- get.hist.quote(instrument="SPY",start=as.Date("2003-12-31"),end=as.Date("2016-06-30"),quote="AdjClose",quiet=T,compression="m")
+bond_prices <- get.hist.quote(instrument="AGG",start=as.Date("2003-12-31"),end=as.Date("2016-06-30"),quote="AdjClose",quiet=T,compression="m")
+eq_prices <- eq_prices/as.numeric(eq_prices[1])
+bond_prices <-  bond_prices/as.numeric(bond_prices[1])
